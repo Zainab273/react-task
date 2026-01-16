@@ -1,0 +1,585 @@
+/* Header.css */
+* {
+  box-sizing: border-box;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  height: 60px;
+  background-color: #23272f; /* React Dark Background */
+  border-bottom: 1px solid #343a46;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #f6f7f9;
+}
+
+/* --- Left Section (Logo) --- */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.react-logo {
+  color: #149eca;
+  width: 28px;
+  height: 28px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.5px;
+}
+
+.version {
+  background-color: #343a46;
+  color: #99a1b3;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 99px;
+  margin-left: 5px;
+}
+
+/* --- Center Section (Search) --- */
+.center-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: #343a46;
+  border-radius: 99px; /* Pill shape */
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 600px;
+  color: #99a1b3;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.search-bar:hover {
+  background-color: #3e4451;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.search-text {
+  font-size: 14px;
+  flex: 1; /* Pushes Ctrl+K to the right */
+}
+
+.shortcut-hint {
+  font-size: 12px;
+  font-family: monospace;
+  background-color: #23272f;
+  border: 1px solid #343a46;
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #99a1b3;
+}
+
+/* --- Right Section (Nav & Icons) --- */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #f6f7f9;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: #149eca;
+}
+
+.icon-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f6f7f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.icon-btn:hover {
+  background-color: #343a46;
+}
+
+.nav-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Mobile Responsive adjustment */
+@media (max-width: 768px) {
+  .nav-links, .shortcut-hint {
+    display: none;
+  }
+  .center-section {
+    max-width: 40px; 
+  }
+  .search-text {
+    display: none;
+  }
+}
+
+/* --- Hero Section Styles --- */
+
+/* Main Container */
+.hero-container {
+  background-color: #23272f; /* Dark Background */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+  min-height: 80vh; /* Screen par center mein dikhane ke liye */
+}
+
+/* Logo Styling */
+.hero-logo-wrapper {
+  margin-bottom: 20px;
+}
+
+.hero-logo {
+  color: #149eca; /* React Blue */
+  width: 100px;
+  height: 100px;
+}
+
+/* Title Styling */
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+
+/* Subtitle Styling */
+.hero-subtitle {
+  font-size: 24px;
+  color: #f6f7f9;
+  margin-top: 10px;
+  margin-bottom: 35px;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+/* Buttons Layout */
+.hero-actions {
+  display: flex;
+  gap: 12px;
+}
+
+/* --- Shared Button Styles --- */
+.hero-btn {
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 99px; /* Pill Shape */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+}
+
+/* --- Primary Button (Blue) --- */
+.hero-btn.primary {
+  background-color: #149eca;
+  color: #23272f; /* Dark Text */
+}
+
+.hero-btn.primary:hover {
+  background-color: #3ebcf2; /* Lighter Blue on hover */
+}
+
+/* --- Secondary Button (Dark/Border) --- */
+.hero-btn.secondary {
+  background-color: rgba(255, 255, 255, 0.1); /* Transparent/Dark */
+  color: #f6f7f9;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-btn.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+/* --- Hero 2 Section Styles --- */
+
+.hero2-container {
+  background-color: #171a1f; /* Same dark background */
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero2-title {
+  font-size: 48px; /* Badi heading */
+  font-weight: 600;
+  color: #f6f7f9;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.hero2-text {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #f6f7f9;
+  max-width: 850px; /* Text ko zyada failne se rokne ke liye */
+  font-weight: 400;
+}
+
+/* Code Highlights (Grey Box) */
+.code-badge {
+  background-color: #343a46; /* Code background color */
+  color: #e6e6e6;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-family: monospace; /* Typewriter font */
+  font-size: 0.9em;
+  margin: 0 2px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero2-title {
+    font-size: 32px;
+  }
+  .hero2-text {
+    font-size: 16px;
+  }
+  .hidden-mobile {
+    display: none; /* Mobile pe zabardasti line break na kare */
+  }
+}
+
+
+/* --- UPDATED Premium Cards Section --- */
+
+.cards-section {
+  background-color: #23272f;
+  padding: 80px 20px; /* Padding badhai */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-heading {
+  font-size: 42px; /* Heading badi ki */
+  color: #f6f7f9;
+  margin-bottom: 60px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Grid Layout - 3 Columns for Bigger Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 ki jagah 3 columns */
+  gap: 30px; /* Gap badhaya */
+  max-width: 1300px; /* Container width badhai */
+  width: 100%;
+}
+
+/* Card Design */
+.react-card {
+  background: linear-gradient(145deg, #2b303b 0%, #23272f 100%); /* Subtle Gradient */
+  border: 1px solid #343a46;
+  border-radius: 20px; /* Zyada round corners */
+  padding: 35px; /* Ander ka space badhaya */
+  display: flex;
+  flex-direction: column;
+  min-height: 320px; /* Height badi ki */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Effect - Blue Glow Border */
+.react-card:hover {
+  transform: translateY(-10px);
+  border-color: #149eca; /* Border turns blue */
+  box-shadow: 0 15px 30px rgba(20, 158, 202, 0.15); /* Blue glow shadow */
+}
+
+/* Icon Styling */
+.card-icon-bg {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(20, 158, 202, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-icon {
+  width: 28px;
+  height: 28px;
+  color: #149eca;
+}
+
+/* Text Styling */
+.card-title {
+  font-size: 26px; /* Title bada kiya */
+  color: #fff;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.card-desc {
+  font-size: 17px; /* Text bada kiya */
+  color: #99a1b3;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet pe 2 */
+  }
+}
+
+@media (max-width: 650px) {
+  .cards-grid {
+    grid-template-columns: 1fr; /* Mobile pe 1 */
+  }
+  .react-card {
+    padding: 25px;
+    min-height: auto;
+  }
+}
+
+
+
+/* --- Community Section Styles --- */
+
+.community-section {
+  background-color: #1a1c22; /* Same dark theme */
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  border-top: 1px solid #343a46; /* Upar wale section se alag karne ke liye halki line */
+}
+
+.community-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+}
+
+/* Icon Styling */
+.community-icon-wrapper {
+  margin-bottom: 25px;
+}
+
+.community-logo {
+  width: 80px;
+  height: 80px;
+  color: #149eca; /* React Blue */
+  animation: spin-slow 20s linear infinite; /* Optional: Dheere ghumega */
+}
+
+/* Heading Styling */
+.community-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 35px;
+  color: #f6f7f9;
+}
+
+/* Button Wrapper */
+.community-btn-wrapper {
+  margin-top: 10px;
+}
+
+/* Optional: Animation for Logo */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .community-title {
+    font-size: 32px;
+  }
+  .community-logo {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+
+/* --- Footer Styles --- */
+
+.footer-container {
+  background-color: #23272f;
+  color: #f6f7f9;
+  padding: 40px 20px 60px; /* Thoda bottom padding zyada */
+  border-top: 1px solid #343a46; /* Subtle separator */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  /* 5 Columns: Brand (thoda bada) + 4 link columns */
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* --- Brand Section --- */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.meta-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.meta-logo {
+  width: 32px;
+  height: 32px;
+  color: #149eca; /* Blue */
+}
+
+.meta-text {
+  font-weight: 700;
+  font-size: 16px;
+  color: #f6f7f9;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #f6f7f9;
+  font-weight: 400;
+  margin: 0;
+}
+
+.uwu {
+  font-size: 13px;
+  color: #99a1b3; /* Faint color */
+  margin: 0;
+}
+
+/* --- Links Columns --- */
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #f6f7f9;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links li a {
+  text-decoration: none;
+  color: #99a1b3; /* Light Grey */
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.footer-links li a:hover {
+  color: #149eca; /* Blue on hover */
+}
+
+/* --- Social Icons --- */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social-link {
+  color: #f6f7f9;
+  transition: color 0.2s;
+}
+
+.social-link:hover {
+  color: #149eca;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 1024px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+    gap: 30px;
+  }
+  .footer-brand {
+    grid-column: span 2; /* Brand poori width lega */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+  .footer-brand {
+    grid-column: span 1;
+  }
+}
